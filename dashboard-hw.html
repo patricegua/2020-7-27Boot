@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>六角西餐廳</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="all.css">
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">商務控制後台</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="dashboard-index.html">首頁 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard-table.html">列表</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid mt-4 main">
+    <div class="row mb-4">
+      <div class="col-lg-3 col-6">
+        <div class="card rounded-0 h-100 ">
+          <div class="card-body d-flex align-items-center">
+            <div class="fa fa-money-bill-alt fa-3x text-secondary mr-2 d-none d-sm-block"></div>
+            <div class="text-center w-100">
+              <div class="h5 font-weight-bold">今日營收</div>
+              <div class="h3">192,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="card rounded-0">
+          <div class="card-body d-flex align-items-center">
+            <div class="fas fa-users fa-3x text-secondary mr-2 d-none d-sm-block"></div>
+            <div class="text-center w-100">
+              <div class="h5 font-weight-bold">會員增加</div>
+              <div class="display-4">172</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="card rounded-0">
+          <div class="card-body d-flex align-items-center">
+            <div class="far fa-id-card fa-3x text-secondary mr-2 d-none d-sm-block"></div>
+            <div class="text-center w-100">
+              <div class="h5 font-weight-bold">訂單數</div>
+              <div class="display-4">320</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <div class="card rounded-0">
+          <div class="card-body d-flex align-items-center">
+            <div class="fas fa-archive fa-3x text-secondary mr-2 d-none d-sm-block"></div>
+            <div class="text-center w-100">
+              <div class="h5 font-weight-bold">待出貨數</div>
+              <div class="display-4">120</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row mb-4">
+      <section class="col-lg-8">
+        <div class="card">
+          <div class="card-header">
+            用戶來源
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-8">
+                <canvas id="barCanvas"></canvas>
+              </div>
+              <div class="col-lg-4">
+                <h4>Detail</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ipsam aliquam repudiandae aperiam
+                  quibusdam placeat ipsa error repellendus laborum nostrum iure explicabo sed, cupiditate quae unde
+                  maiores voluptatem nemo eligendi.</p>
+                <h6>Google 來源</h6>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <h6>Yahoo 來源 </h6>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-header">
+            小標題
+          </div>
+          <div class="card-body d-flex align-items-center">
+            <canvas class="chart-item"></canvas>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        營運整理清單
+      </div>
+      <div class="card-body">
+        <div class="">
+          <form class="form-inline d-flex">
+            <label class="my-1 mr-2 sr-only" for="inlineFormCustomSelectPref">月份</label>
+            <select class="custom-select custom-select-sm my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+              <option selected>9月</option>
+              <option value="1">10月</option>
+              <option value="2">11月</option>
+              <option value="3">12月</option>
+            </select>
+            <div class="ml-auto">
+              <a href="#" class="btn btn-outline-secondary mr-2 btn-sm">下載報表</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">訂單管理</a>
+            </div>
+          </form>
+        </div>
+        <table class="table mb-0 table-responsive">
+          <div class="thead">
+            <tr>
+              <th width="50" >日期</th>
+              <th>訂單數</th>
+              <th>退費數</th>
+              <th>出貨數</th>
+              <th width="15%">有問題貨品</th>
+              <th width="150" >營業額</th>
+              <th width="150" >淨利</th>
+            </tr>
+          </div>
+          <div class="tbody">
+            <tr>
+              <td>9/1</td>
+              <td>300</td>
+              <td>2</td>
+              <td>220</td>
+              <td>3</td>
+              <td class="text-right">255,000</td>
+              <td class="text-right">160,150</td>
+            </tr>
+            <tr>
+              <td>9/2</td>
+              <td>340</td>
+              <td>5</td>
+              <td>240</td>
+              <td>3</td>
+              <td class="text-right">225,000</td>
+              <td class="text-right">161,150</td>
+            </tr>
+            <tr>
+              <td>9/3</td>
+              <td>470</td>
+              <td>7</td>
+              <td>260</td>
+              <td>5</td>
+              <td class="text-right">285,000</td>
+              <td class="text-right">132,150</td>
+            </tr>
+            <tr>
+              <td>9/4</td>
+              <td>170</td>
+              <td>2</td>
+              <td>220</td>
+              <td>3</td>
+              <td class="text-right">185,000</td>
+              <td class="text-right">180,150</td>
+            </tr>
+            <tr>
+              <td>9/5</td>
+              <td>260</td>
+              <td>5</td>
+              <td>270</td>
+              <td>3</td>
+              <td class="text-right">275,000</td>
+              <td class="text-right">120,150</td>
+            </tr>
+          </div>
+          <div class="tfoot">
+            <tr>
+              <td class="text-right" colspan="6">月總營收額</td>
+              <td class="text-right" >3,750,000</td>
+            </tr>
+            <tr>
+              <td class="text-right" colspan="6">月總淨利額</td>
+              <td class="text-right">2,451,000</td>
+            </tr>
+          </div>
+        </table>
+      </div>
+    </div>
+
+
+
+    <footer class="mt-5 py-3 bg-light text-secondary text-center">
+      六角學院後台管理系統
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+      integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // 編輯的 Modal 事件
+        $('#editModal').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget) // 選則當初觸發事件的按鈕
+          var title = button.data('title') // 使用 data-* 來取得特定內容
+
+          var modal = $(this)
+          modal.find('.modal-title').text(title) // 寫入資料
+        });
+
+        $('#removeModal').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget) // 選則當初觸發事件的按鈕
+          var title = button.data('title') // 使用 data-* 來取得特定內容
+
+          var modal = $(this)
+          modal.find('.modal-title').text('確認' + title) // 寫入資料
+        })
+      });
+    </script>
+    <script>
+      window.chartColors = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(201, 203, 207)'
+      };
+
+      var randomScalingFactor = function () {
+        return Math.round(Math.random() * 100);
+      };
+
+      var config = {
+        type: 'pie',
+        data: {
+          datasets: [{
+            data: [
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+              randomScalingFactor(),
+            ],
+            backgroundColor: [
+              window.chartColors.red,
+              window.chartColors.orange,
+              window.chartColors.yellow,
+              window.chartColors.green,
+              window.chartColors.blue,
+            ],
+            label: 'Dataset 1'
+          }],
+          labels: [
+            "Red",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue"
+          ]
+        },
+        options: {
+          responsive: true
+        }
+      };
+
+
+      // bar
+      var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+        "November", "December"
+      ];
+      var colors = Chart.helpers.color;
+      var barChartData = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+          label: 'Dataset 1',
+          backgroundColor: colors(window.chartColors.red).alpha(0.5).rgbString(),
+          borderColor: window.chartColors.red,
+          borderWidth: 1,
+          data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+          ]
+        }, {
+          label: 'Dataset 2',
+          backgroundColor: colors(window.chartColors.blue).alpha(0.5).rgbString(),
+          borderColor: window.chartColors.blue,
+          borderWidth: 1,
+          data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+          ]
+        }]
+
+      };
+
+      window.onload = function () {
+        // pie
+        document.querySelectorAll('.chart-item').forEach(function (item) {
+          config.data.datasets.forEach(function (dataset) {
+            dataset.data = dataset.data.map(function () {
+              return randomScalingFactor();
+            });
+          });
+          var ctx = item.getContext("2d");
+          window.myPie = new Chart(ctx, config);
+        })
+
+
+        // bar
+        var barCtx = document.getElementById("barCanvas").getContext("2d");
+        window.myBar = new Chart(barCtx, {
+          type: 'bar',
+          data: barChartData,
+          options: {
+            responsive: true,
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Chart.js Bar Chart'
+            }
+          }
+        });
+
+      };
+    </script>
+</body>
+
+</html>
